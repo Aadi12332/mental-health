@@ -1,0 +1,18 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  background: linear-gradient(245.9deg, #219580 14.52%, #346079 84.54%);
+  @apply text-white px-6 py-3 rounded-lg font-medium;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
