@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
-import Button from "./Button"
+import Button from "../../ui/Button"
 import GradientButton from "./GradientButton"
+import HeroReact from "../../assets/images/herorectangle.svg"
 
 const categories = [
   { title: "ADHD", img: "https://picsum.photos/200?1" },
@@ -43,13 +44,17 @@ export default function HeroSection() {
 
   const duplicated = [...categories, ...categories]
   return (
-    <section className="mt-7 lg:px-6 px-3">
-      <div className="max-w-[1440px] bg-[#2195800D] rounded-[30px] mx-auto pt-[90px] pb-10 px-6 text-center">
-        <div className="inline-block bg-white px-2.5 py-[5px] rounded-full text-base text-[#141416] mb-6">
+    <section className="mt-7 lg:px-6 px-3 max-w-[1440px] mx-auto">
+      <div className="bg-[#2195800D] rounded-[30px] pt-[90px] pb-10 px-6 text-center relative">
+        <img src={HeroReact} alt="" className="absolute top-[90px] lg:left-[20%] left-[5%] z-0 object-cover" />
+        <img src={HeroReact} alt="" className="absolute top-[90px] lg:right-[20%] right-[5%] z-0 object-cover" />
+        <img src={HeroReact} alt="" className="absolute top-[250px] left-6 z-0 object-cover opacity-50" />
+        <img src={HeroReact} alt="" className="absolute top-[250px] right-6 z-0 object-cover opacity-50" />
+        <div className="inline-block bg-white px-2.5 py-[5px] rounded-full text-base text-[#141416] mb-6 z-10 relative">
           Welcome To Mental Health Tally
         </div>
 
-        <h1 className="mb-6 leading-tight lg:text-[64px] text-[40px] font-semibold text-center">
+        <h1 className="mb-6 leading-tight lg:text-[64px] text-[40px] font-semibold text-center z-10 relative">
           <GradientButton fontSize="lg:text-[64px] text-[40px] font-semibold">
             Care For Your Mind,
           </GradientButton>

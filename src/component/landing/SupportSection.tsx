@@ -1,7 +1,7 @@
 import { Target, UserRound, MapPin, Award, LaptopMinimal } from "lucide-react";
-import Button from "./Button";
-import DoctorImage from "../assets/images/dealingimg.svg";
-import MapImage from "../assets/images/mapimg.svg";
+import Button from "../../ui/Button";
+import DoctorImage from "../../assets/images/dealingimg.svg";
+import MapImage from "../../assets/images/mapimg.svg";
 import GradientButton from "./GradientButton";
 
 export default function SupportSection() {

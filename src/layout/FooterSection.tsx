@@ -9,7 +9,7 @@ export default function FooterSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
           <div>
-            <img src={Logo} alt="Logo" className="h-[50px]" />
+            <img src={Logo} alt="Logo" className="h-[50px] mb-6" />
 
             <ul className="space-y-3 text-[#DEDEDE] text-base">
               <li>Blog</li>

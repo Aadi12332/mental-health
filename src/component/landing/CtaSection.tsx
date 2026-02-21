@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react"
-import LeftCta from "../assets/images/leftcta.svg"
-import RightCta from "../assets/images/rightcta.svg"
+import LeftCta from "../../assets/images/leftcta.svg"
+import RightCta from "../../assets/images/rightcta.svg"
+
 
 export default function CtaSection() {
   return (
