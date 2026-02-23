@@ -10,6 +10,8 @@ import PatientLoginPage from "./component/auth/PatientLoginPage"
 import ProviderLoginPage from "./component/auth/ProviderLoginPage"
 import GetStartedPage from "./component/auth/GetStartedPage"
 import DoctorSelection from "./component/auth/DoctorSelection"
+import IntakeForm from "./component/auth/IntackForm"
+import IntakeFormSubmitted from "./component/auth/IntakeFormSubmitted"
 
 
 function ScrollToTop() {
@@ -32,11 +34,13 @@ export default function App() {
         </Route>
 
         <Route element={<AuthLayout />}>
-          <Route path="/signup" element={<SignupRolePage />} />
+          <Route path="/signin" element={<SignupRolePage />} />
           <Route path="/patient-login" element={<PatientLoginPage />} />
           <Route path="/provider-login" element={<ProviderLoginPage />} />
           <Route path="/get-started" element={<GetStartedPage />} />
           <Route path="/doctor-selection" element={<DoctorSelection />} />
+          <Route path="/intake-form" element={<IntakeForm />} />
+          <Route path="/intake-form-submitted" element={<IntakeFormSubmitted />} />
         </Route>
 
       </Routes>

@@ -49,7 +49,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="bg-[#2C787C0D] px-4 h-[52px] rounded-[10px] flex items-center cursor-pointer" onClick={()=>navigate("/signup")}>
+          <div className="bg-[#2C787C0D] px-4 h-[52px] rounded-[10px] flex items-center cursor-pointer" onClick={()=>navigate("/signin")}>
             <GradientButton fontSize="text-[20px]">
               <User2 fill="url(#iconGradient)" stroke="none" />
               Sign In

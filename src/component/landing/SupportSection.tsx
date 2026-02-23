@@ -1,10 +1,12 @@
-import { Target, UserRound, MapPin, Award, LaptopMinimal } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Target, Award, LaptopMinimal } from "lucide-react";
 import Button from "../../ui/Button";
 import DoctorImage from "../../assets/images/dealingimg.svg";
 import MapImage from "../../assets/images/mapimg.svg";
 import GradientButton from "./GradientButton";
 
 export default function SupportSection() {
+  const navigate = useNavigate();
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3 space-y-24">
@@ -115,7 +117,7 @@ export default function SupportSection() {
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4" onClick={()=>navigate("/get-started")}>
               <Button>Book Your Session →</Button>
             </div>
           </div>

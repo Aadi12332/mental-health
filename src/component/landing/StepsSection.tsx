@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button"
 
 type Step = {
@@ -33,6 +34,7 @@ const steps = [
   ];
 
 export default function StepsSection() {
+  const navigate = useNavigate();
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
@@ -74,7 +76,7 @@ export default function StepsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12 flex justify-center">
+        <div className="text-center mt-12 flex justify-center" onClick={()=>navigate("/get-started")}>
           <Button>Schedule Your Appointment →</Button>
         </div>
 

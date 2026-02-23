@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import Button from "../../ui/Button"
 import GradientButton from "./GradientButton"
 import HeroReact from "../../assets/images/herorectangle.svg"
@@ -18,6 +19,7 @@ const categories = [
 
 export default function HeroSection() {
     const sliderRef = useRef<HTMLDivElement>(null)
+    const navigate = useNavigate()
 
   useEffect(() => {
     const slider = sliderRef.current
@@ -88,7 +90,9 @@ export default function HeroSection() {
           ))}
         </div>
 
+<div onClick={()=>navigate("/get-started")}>
         <Button className="mx-auto">Book Your Session →</Button>
+</div>
       </div>
     </section>
   )

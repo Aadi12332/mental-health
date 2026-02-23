@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 import LeftCta from "../../assets/images/leftcta.svg"
 import RightCta from "../../assets/images/rightcta.svg"
 
 
 export default function CtaSection() {
+  const navigate = useNavigate();
   return (
     <section className="px-6 py-16 bg-white">
       <div className="max-w-[1440px] lg:px-6 px-3 mx-auto">
@@ -20,7 +22,7 @@ export default function CtaSection() {
           </p>
 
           <div className="flex justify-center">
-            <button className="bg-white text-[#2F7D7A] font-semibold text-lg px-8 h-[52px] rounded-xl flex items-center gap-2">
+            <button onClick={()=>navigate("/get-started")} className="bg-white text-[#2F7D7A] font-semibold text-lg px-8 h-[52px] rounded-xl flex items-center gap-2">
               Schedule Your Visit
               <ArrowRight size={20} />
             </button>

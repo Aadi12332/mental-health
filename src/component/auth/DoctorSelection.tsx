@@ -1,7 +1,6 @@
 import bgImage from "../../assets/images/bgimg.svg";
 import Logo from "../../assets/images/logo.svg";
 import { useNavigate } from "react-router-dom";
-import TreatmentSelectionCard from "./TreatmentSelectionCard";
 import DoctorCareSelection from "./DoctorCareSelection";
 
 export default function DoctorSelection() {
@@ -9,7 +8,7 @@ export default function DoctorSelection() {
   return (
     <div className="bg-[linear-gradient(180deg,#F0F9F7_0%,#E8F4F8_100%)] h-screen w-full">
       <div
-        className="h-screen bg-cover bg-center flex flex-col items-center justify-center lg:px-6 px-3 w-full py-10 overflow-auto scroll-hide"
+        className="h-screen bg-cover bg-center flex flex-col items-center lg:px-6 px-3 w-full py-10 overflow-auto scroll-hide"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ArrowLeft, ArrowLeftIcon, ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import GradientButton from "../landing/GradientButton";
+import BackArrow from "../../assets/images/backArrow.svg";
 
 type Props = {
   title?: string;
@@ -22,14 +23,10 @@ export default function TreatmentSelectionCard({
     <div className="w-full max-w-[585px] mx-auto">
       <div className="bg-white rounded-3xl p-3 lg:p-6 shadow-[0px_3.9px_5.86px_-3.9px_#0000001A,0px_9.76px_14.64px_-2.93px_#0000001A] border-b border-[#219580]">
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/")}
           className="flex items-center justify-center mb-8 bg-[#2195801A] rounded-full w-9 h-9"
         >
-          <ArrowLeftIcon
-            size={18}
-            stroke="url(#iconGradient)"
-            className="text-[#219580]"
-          />
+          <img src={BackArrow} alt="Back" />
         </button>
 
         <div>
@@ -85,7 +82,7 @@ export default function TreatmentSelectionCard({
 
           <p className="text-center mt-6 text-[#A4A4A4] text-[20px] flex items-center justify-center gap-2">
             Already Have An Account?{" "}
-            <div className="" onClick={() => navigate("/")}>
+            <div className="" onClick={() => navigate("/signin")}>
               <GradientButton fontSize="text-[20px] cursor-pointer">
                 Sign In
               </GradientButton>
