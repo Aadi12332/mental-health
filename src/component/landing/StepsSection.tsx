@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button"
+import GradientButton from "./GradientButton";
 
 type Step = {
   title: string
@@ -39,12 +40,11 @@ export default function StepsSection() {
     <section className="py-20 bg-white">
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
 
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-semibold">
-            <span className="text-[#2F7D7A]">
-              Getting Started Is Simple
-            </span>{" "}
-            Just Three Easy Steps
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-semibold flex items-center justify-center gap-3">
+            <GradientButton fontSize="text-4xl lg:text-5xl font-semibold">
+              Getting Started Is Simple <span className="text-black">Just Three Easy Steps</span>
+            </GradientButton>{" "}
           </h2>
           <p className="text-gray-600 mt-4">
             No Clinic Visits. No Complicated Forms. Just Professional Mental Health Care, Designed To Fit Your Routine.

@@ -12,6 +12,10 @@ import GetStartedPage from "./component/auth/GetStartedPage"
 import DoctorSelection from "./component/auth/DoctorSelection"
 import IntakeForm from "./component/auth/IntackForm"
 import IntakeFormSubmitted from "./component/auth/IntakeFormSubmitted"
+import FaqPage from "./page/Faqpage"
+import ContactUsPage from "./page/ContactUsPage"
+import BlogPage from "./page/BlogPage"
+import ProviderPage from "./page/ProviderPage"
 
 
 function ScrollToTop() {
@@ -31,6 +35,10 @@ export default function App() {
 
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/faqs" element={<FaqPage />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/providers" element={<ProviderPage />} />
         </Route>
 
         <Route element={<AuthLayout />}>

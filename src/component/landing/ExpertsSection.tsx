@@ -1,6 +1,7 @@
 import { Check } from "lucide-react"
 import Button from "../../ui/Button"
 import { useEffect, useRef } from "react"
+import GradientButton from "./GradientButton";
 
  const doctors = [
     {
@@ -52,8 +53,8 @@ export default function ExpertsSection() {
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
 
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-semibold">
-            <span className="text-[#2F7D7A]">Meet The Experts</span>{" "}
+          <h2 className="text-4xl lg:text-5xl font-semibold flex items-center gap-3">
+            <GradientButton fontSize="text-4xl lg:text-5xl font-semibold">Meet The Experts</GradientButton>{" "}
             Behind Your Care
           </h2>
           <p className="text-gray-600 mt-4">

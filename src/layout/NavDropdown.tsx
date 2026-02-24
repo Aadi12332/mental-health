@@ -9,9 +9,10 @@ type DropdownItem = {
 type Props = {
   label: string
   items?: DropdownItem[]
+  onClick?: () => void
 }
 
-export default function NavDropdown({ label, items }: Props) {
+export default function NavDropdown({ label, items, onClick }: Props) {
   const [open, setOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -38,7 +39,7 @@ export default function NavDropdown({ label, items }: Props) {
       onMouseLeave={() => setOpen(false)}
     >
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => {onClick?.(); setOpen(!open)}}
         className="flex items-center gap-1 text-gray-700"
       >
         {label}

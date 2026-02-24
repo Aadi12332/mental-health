@@ -10,7 +10,10 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between py-5 lg:px-6 px-3">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={()=>navigate("/")}>
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <img src={Logo} alt="Logo" className="h-[50px]" />
         </div>
 
@@ -18,44 +21,68 @@ export default function Navbar() {
           <NavDropdown
             label="Conditions"
             items={[
-              { label: "ADHD" },
-              { label: "Anxiety" },
-              { label: "Depression" },
-              { label: "Insomnia" },
-              { label: "OCD" },
+              { label: "ADHD", onClick: () => navigate("/conditions/adhd") },
+              {
+                label: "Anxiety",
+                onClick: () => navigate("/conditions/anxiety"),
+              },
+              {
+                label: "Depression",
+                onClick: () => navigate("/conditions/depression"),
+              },
+              {
+                label: "Insomnia",
+                onClick: () => navigate("/conditions/insomnia"),
+              },
+              {
+                label: "OCD",
+                onClick: () => navigate("/conditions/ocd"),
+              },
             ]}
           />
           <NavDropdown
             label="Services"
             items={[
-              { label: "Medication Refill" },
-              { label: "Treatments Management" },
-              { label: "Work Excuse Letter" },
+              {
+                label: "Medication Refill",
+                onClick: () => navigate("/services/medication-refill"),
+              },
+              {
+                label: "Treatments Management",
+                onClick: () => navigate("/services/treatment-management"),
+              },
+              {
+                label: "Work Excuse Letter",
+                onClick: () => navigate("/services/work-letter"),
+              },
             ]}
           />
-          <NavDropdown label="Blog" />
+          <NavDropdown label="Blog" onClick={() => navigate("/blog")} />
 
           <NavDropdown
             label="Company"
             items={[
-              { label: "About Us" },
-              { label: "Careers" },
-              { label: "Contact Us" },
-              { label: "Providers" },
-              { label: "Reviews" },
+              { label: "About Us", onClick: () => navigate("/about-us") },
+              { label: "Careers", onClick: () => navigate("/careers") },
+              { label: "Contact Us", onClick: () => navigate("/contact-us") },
+              { label: "Providers", onClick: () => navigate("/providers") },
+              { label: "Reviews", onClick: () => navigate("/reviews") },
             ]}
           />
-         <NavDropdown label="FAQs" />
+          <NavDropdown label="FAQs" onClick={() => navigate("/faqs")} />
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="bg-[#2C787C0D] px-4 h-[52px] rounded-[10px] flex items-center cursor-pointer" onClick={()=>navigate("/signin")}>
+          <div
+            className="bg-[#2C787C0D] px-4 h-[52px] rounded-[10px] flex items-center cursor-pointer"
+            onClick={() => navigate("/signin")}
+          >
             <GradientButton fontSize="text-[20px]">
               <User2 fill="url(#iconGradient)" stroke="none" />
               Sign In
             </GradientButton>
           </div>
-          <div className="" onClick={()=>navigate("/get-started")}>
+          <div className="" onClick={() => navigate("/get-started")}>
             <Button>Get Started →</Button>
           </div>
         </div>

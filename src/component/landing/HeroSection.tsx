@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react"
-import { useNavigate } from "react-router-dom"
-import Button from "../../ui/Button"
-import GradientButton from "./GradientButton"
-import HeroReact from "../../assets/images/herorectangle.svg"
+import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "../../ui/Button";
+import GradientButton from "./GradientButton";
+import HeroReact from "../../assets/images/herorectangle.svg";
 
 const categories = [
   { title: "ADHD", img: "https://picsum.photos/200?1" },
@@ -15,44 +15,60 @@ const categories = [
   { title: "Weight Wellness", img: "https://picsum.photos/200?3" },
   { title: "Depression", img: "https://picsum.photos/200?4" },
   { title: "Sleep Issues", img: "https://picsum.photos/200?5" },
-]
+];
 
 export default function HeroSection() {
-    const sliderRef = useRef<HTMLDivElement>(null)
-    const navigate = useNavigate()
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const slider = sliderRef.current
-    if (!slider) return
+    const slider = sliderRef.current;
+    if (!slider) return;
 
-    let animationFrame: number
-    let scrollAmount = 0
+    let animationFrame: number;
+    let scrollAmount = 0;
 
     const animate = () => {
-      scrollAmount += 3
+      scrollAmount += 3;
       if (slider.scrollLeft >= slider.scrollWidth / 2) {
-        slider.scrollLeft = 0
-        scrollAmount = 0
+        slider.scrollLeft = 0;
+        scrollAmount = 0;
       } else {
-        slider.scrollLeft += 3
+        slider.scrollLeft += 3;
       }
-      animationFrame = requestAnimationFrame(animate)
-    }
+      animationFrame = requestAnimationFrame(animate);
+    };
 
-    animationFrame = requestAnimationFrame(animate)
+    animationFrame = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(animationFrame)
-  }, [])
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
 
-  const duplicated = [...categories, ...categories]
+  const duplicated = [...categories, ...categories];
   return (
     <section className="mt-7 lg:px-6 px-3 max-w-[1440px] mx-auto">
-      <div className="bg-[#2195800D] rounded-[30px] pt-[90px] pb-10 px-6 text-center relative">
-        <img src={HeroReact} alt="" className="absolute top-[90px] lg:left-[20%] left-[5%] z-0 object-cover" />
-        <img src={HeroReact} alt="" className="absolute top-[90px] lg:right-[20%] right-[5%] z-0 object-cover" />
-        <img src={HeroReact} alt="" className="absolute top-[250px] left-6 z-0 object-cover opacity-50" />
-        <img src={HeroReact} alt="" className="absolute top-[250px] right-6 z-0 object-cover opacity-50" />
-        <div className="inline-block bg-white px-2.5 py-[5px] rounded-full text-base text-[#141416] mb-6 z-10 relative">
+      <div className={`rounded-[30px] pt-20 px-6 text-center relative pb-10 bg-[#2195800D]`}>
+        <img
+          src={HeroReact}
+          alt=""
+          className="absolute top-[90px] lg:left-[20%] left-[5%] z-0 object-cover"
+        />
+        <img
+          src={HeroReact}
+          alt=""
+          className="absolute top-[90px] lg:right-[20%] right-[5%] z-0 object-cover"
+        />
+        <img
+          src={HeroReact}
+          alt=""
+          className="absolute top-[250px] left-6 z-0 object-cover opacity-50"
+        />
+        <img
+          src={HeroReact}
+          alt=""
+          className="absolute top-[250px] right-6 z-0 object-cover opacity-50"
+        />
+        <div className={`inline-block px-5 py-[5px] rounded-full text-sm mb-6 z-10 relative min-w-[213px] bg-white text-[#141416]`}>
           Welcome To Mental Health Tally
         </div>
 
@@ -61,39 +77,42 @@ export default function HeroSection() {
             Care For Your Mind,
           </GradientButton>
           <GradientButton fontSize="lg:text-[64px] text-[40px] font-semibold gap-4">
-            From  <span className="text-[#000]">Anywhere</span>
+            From <span className="text-[#000]">Anywhere</span>
           </GradientButton>
         </h1>
 
-        <p className="text-[#333333] text-[20px] max-w-[553px] mx-auto mb-9">
-          Connect With Trusted Mental Health Professionals Online - Care Designed Around You.
+        <p className={`text-[#333333] text-[20px] max-w-[553px] mx-auto mb-9`}>
+          Connect With Trusted Mental Health Professionals Online - Care
+          Designed Around You.
         </p>
-
-        <div className="flex gap-6 mb-10 overflow-auto scroll-hide" ref={sliderRef}>
-          {duplicated.map((item) => (
-            <div
-              key={item.title}
-              className="bg-[#E2EBEC] rounded-[22px] p-6 relative overflow-hidden min-w-[243px] w-[243px] h-[243px]"
-            >
-              <div className="bg-[#0084D41C] w-[266px] h-[266px] absolute -top-1/2 -left-1/2 z-0"></div>
-              <div className="w-[163px] h-[163px] mx-auto rounded-full overflow-hidden mb-4 relative z-10">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
+          <div
+            className="flex gap-6 mb-10 overflow-auto scroll-hide"
+            ref={sliderRef}
+          >
+            {duplicated.map((item) => (
+              <div
+                key={item.title}
+                className="bg-[#E2EBEC] rounded-[22px] p-6 relative overflow-hidden min-w-[243px] w-[243px] h-[243px]"
+              >
+                <div className="bg-[#0084D41C] w-[266px] h-[266px] absolute -top-1/2 -left-1/2 z-0"></div>
+                <div className="w-[163px] h-[163px] mx-auto rounded-full overflow-hidden mb-4 relative z-10">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-semibold text-[20px] text-[#00598D]">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="font-semibold text-[20px] text-[#00598D]">
-                {item.title}
-              </h3>
-            </div>
-          ))}
-        </div>
-
-<div onClick={()=>navigate("/get-started")}>
-        <Button className="mx-auto">Book Your Session →</Button>
-</div>
+            ))}
+          </div>
+       
+          <div onClick={() => navigate("/get-started")}>
+            <Button className="mx-auto">Book Your Session →</Button>
+          </div>
       </div>
     </section>
-  )
+  );
 }

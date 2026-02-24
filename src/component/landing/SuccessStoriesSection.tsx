@@ -1,4 +1,5 @@
 import { Star } from "lucide-react"
+import GradientButton from "./GradientButton"
 
 type Story = {
   name: string
@@ -31,13 +32,17 @@ const stories: Story[] = [
     },
   ]
 
-export default function SuccessStoriesSection() {
+export default function SuccessStoriesSection({provider}: {provider?: boolean}) {
   return (
-    <section className="py-20 bg-[#F3F7F6]">
+    <section className={`${!provider ? "bg-[#F3F7F6] py-20" : "py-0 pb-20"}`}>
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
-        <h2 className="text-center text-4xl font-semibold mb-16">
-          <span className="text-[#2F7D7A]">Success</span> Stories
-        </h2>
+        {
+          !provider && (
+            <h2 className="text-center text-4xl lg:text-5xl font-semibold mb-16 flex items-center gap-3 justify-center">
+              <GradientButton fontSize="text-center text-4xl lg:text-5xl font-semibold">Success</GradientButton> Stories
+            </h2>
+          )
+        }
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stories.map((story: Story) => (
