@@ -3,8 +3,8 @@ import Logo from "../assets/images/logowhite.svg"
 
 export default function FooterSection() {
   return (
-    <footer className="bg-[#3B657D] text-white pt-20 pb-10 px-6">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-[#3B657D] text-white pt-20 pb-10 ">
+      <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 

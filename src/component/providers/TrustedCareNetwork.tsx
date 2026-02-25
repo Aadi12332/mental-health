@@ -57,7 +57,7 @@ export default function TrustedCareNetwork() {
             {loopDoctors.map((doc, index) => (
               <div
                 key={index}
-                className="w-[280px] md:w-[300px] bg-white rounded-2xl border border-[#7F7F7F20] shadow-[0px_1px_2px_-1px_#0000001A] p-4 flex-shrink-0"
+                className="w-[280px] md:w-[360px] bg-white rounded-2xl border border-[#7F7F7F20] shadow-[0px_1px_2px_-1px_#0000001A] p-4 flex-shrink-0"
               >
                 <img
                   src={doc.image}
@@ -78,10 +78,10 @@ export default function TrustedCareNetwork() {
           </div>
           <div className="flex gap-4 animate-scroll w-max">
 
-            {loopDoctors.map((doc, index) => (
+            {loopDoctors.reverse().map((doc, index) => (
               <div
                 key={index}
-                className="w-[280px] md:w-[310px] bg-white rounded-2xl border border-[#7F7F7F20] shadow-[0px_1px_2px_-1px_#0000001A] p-3 flex-shrink-0"
+                className="w-[280px] md:w-[360px] bg-white rounded-2xl border border-[#7F7F7F20] shadow-[0px_1px_2px_-1px_#0000001A] p-3 flex-shrink-0"
               >
                 <img
                   src={doc.image}

@@ -16,6 +16,8 @@ import FaqPage from "./page/Faqpage"
 import ContactUsPage from "./page/ContactUsPage"
 import BlogPage from "./page/BlogPage"
 import ProviderPage from "./page/ProviderPage"
+import ReviewPage from "./page/ReviewPage"
+import CareerPage from "./page/CareerPage"
 
 
 function ScrollToTop() {
@@ -39,6 +41,8 @@ export default function App() {
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/providers" element={<ProviderPage />} />
+          <Route path="/reviews" element={<ReviewPage />} />
+          <Route path="/careers" element={<CareerPage />} />
         </Route>
 
         <Route element={<AuthLayout />}>

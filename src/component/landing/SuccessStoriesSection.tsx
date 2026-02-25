@@ -32,9 +32,9 @@ const stories: Story[] = [
     },
   ]
 
-export default function SuccessStoriesSection({provider}: {provider?: boolean}) {
+export default function SuccessStoriesSection({provider, bgcolor=false}: {provider?: boolean, bgcolor?: boolean}) {
   return (
-    <section className={`${!provider ? "bg-[#F3F7F6] py-20" : "py-0 pb-20"}`}>
+    <section className={`${!provider ? "bg-[#F3F7F6] py-20" : "py-0 pb-20"} ${bgcolor?"!bg-white":""}`}>
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
         {
           !provider && (

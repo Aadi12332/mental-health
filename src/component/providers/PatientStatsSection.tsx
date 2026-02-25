@@ -22,7 +22,7 @@ const stats: Stat[] = [
 
 export default function PatientStatsSection() {
   return (
-    <section className="pb-0 pt-10">
+    <section className="pb-20 pt-10">
       <div className="max-w-[1440px] mx-auto lg:px-6 px-3">
 
         <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 flex items-center gap-3 justify-center">
